@@ -91,4 +91,4 @@ The local repository was connected to the remote GitHub repository through the o
 
 GitHub authentication was configured using HTTPS with a fine-grained Personal Access Token (PAT).
 
-Git credential caching was enabled to temporarily store credentials in memory.
+Git credential caching was enabled to temporarily store credentials in memory.g
