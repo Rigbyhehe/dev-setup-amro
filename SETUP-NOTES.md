@@ -15,7 +15,8 @@ This file documents the tools, settings, extensions, and commands used to config
 
 ### 1. VS Code
 
-VS Code was already installed and configured with the required extensions and workspace settings.
+VS Code was downloaded and installed from the official Visual Studio Code website.
+
 ### 1.1 Workspace Settings
 
 The following workspace settings were configured in `.vscode/settings.json`:
