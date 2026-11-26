@@ -16,6 +16,22 @@ This file documents the tools, settings, extensions, and commands used to config
 ### 1. VS Code
 
 VS Code was already installed and configured with the required extensions and workspace settings.
+### 1.1 Workspace Settings
+
+The following workspace settings were configured in `.vscode/settings.json`:
+
+`files.autoSave: afterDelay`  Automatically saves files after a short delay 
+`editor.formatOnSave: true`  Formats files whenever they are saved 
+ `editor.renderWhitespace: all` Displays whitespace characters to make formatting easier to inspect
+
+### 1.2 Recommended Extensions
+
+The following extensions were added to `.vscode/extensions.json`:
+ Python : Provides Python language support, debugging, and interpreter selection 
+ Pylance : Provides code completion, type checking, and error detection 
+ GitLens : Provides Git history, commit information, and line blame 
+
+These recommendations allow the same development tools to be suggested when the repository is opened in VS Code.
 
 ### 2. Git
 
@@ -23,34 +39,42 @@ Git for Windows was installed using the official Windows installer.
 
 Git was installed inside Ubuntu using:
 
-```
 sudo apt install git
-```
 
 Installation was verified on Windows and Ubuntu using:
 
-```
 git --version
-```
 
 ### 3. WSL 2 and Ubuntu 24.04
 
 installed Ubuntu using:
 
-```
 wsl --install -d Ubuntu-24.04
-```
+
 ### 4. Python 3.11 and uv
 
 Ubuntu 24.04 comes with Python 3.12.3 by default. Since the project required Python 3.11, uv was installed to manage Python versions without replacing the system Python.
 
+uv was installed using its official installation script:
+
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+
 Python 3.11.18 was installed using uv and its version was verified successfully.
+The command:
+uv python install 3.11
 
 ### 5. Virtual Environments
 
 A virtual environment was created using uv to isolate project dependencies from the system Python and other projects.
 
 The environment was activated before installing packages and deactivated when finished.
+The commands:
+uv venv --python 3.11
+source .venv/bin/activate
+python -m pip install requests
+python -m pip show requests
+deactivate
 
 ### 6. VS Code and WSL Integration
 
